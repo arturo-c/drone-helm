@@ -216,6 +216,7 @@ func (p *Plugin) Exec() error {
 		fmt.Printf("Values: %s \n", p.Config.Values)
 		resolveSecrets(p)
 		if p.Config.APIServer == "" {
+			fmt.Println("klkkkkkkkkkkkkkkkkkkkkkkkkK")
 			return fmt.Errorf("Error: API Server is needed to deploy.")
 		}
 		if p.Config.Token == "" {
