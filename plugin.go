@@ -352,6 +352,7 @@ func unQuote(s string) string {
 
 func (p *Plugin) debugEnv() {
 	// debug env vars
+	fmt.Printf("Secrets: %s \n", p.Config.Secrets)
 	for _, e := range os.Environ() {
 		fmt.Println("-Var:--", e)
 	}
