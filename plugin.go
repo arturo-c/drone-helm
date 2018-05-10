@@ -213,6 +213,7 @@ func (p *Plugin) Exec() error {
 
 	// create /root/.kube/config file if not exists
 	if _, err := os.Stat(p.Config.KubeConfig); os.IsNotExist(err) {
+		fmt.Printf("Values: %s \n", p.Config.Values)
 		resolveSecrets(p)
 		if p.Config.APIServer == "" {
 			return fmt.Errorf("Error: API Server is needed to deploy.")
